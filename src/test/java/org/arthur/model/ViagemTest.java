@@ -10,24 +10,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ViagemTest {
 
+    private Viagem viagem;
+
     @BeforeEach
     void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
-    @Test
-    void getOrigem() {
-    }
-
-    @Test
-    void getDestino() {
-    }
-
-    @Test
-    void duracaoHoras() {
         Viagem viagem = new Viagem(
                 new Estacao("Estacao A", "Cidade A"),
                 new Estacao("Estacao B", "Cidade B"),
@@ -35,6 +21,20 @@ class ViagemTest {
                 LocalDateTime.of(2024, 6, 1, 18, 0),
                 new Trem("T123", 100, 0)
         );
+    }
+
+    @Test
+    void getOrigem() {
+        assertEquals("Estacao A", viagem.getOrigem().getNome());
+    }
+
+    @Test
+    void getDestino() {
+        assertEquals("Estacao B", viagem.getDestino().getNome());
+    }
+
+    @Test
+    void duracaoHoras() {
         assertEquals("04:00", viagem.duracaoHoras());
     }
 }

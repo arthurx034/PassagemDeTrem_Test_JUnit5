@@ -8,23 +8,20 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class EstacaoTest {
 
+    private Estacao estacao;
+
     @BeforeEach
     void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
+        Estacao estacao = new Estacao("Estacao A", "Cidade A");
     }
 
     @Test
     void getNome() {
-        Estacao estacao = new Estacao("Estacao A", "Cidade A");
         assertEquals("Estacao A", estacao.getNome());
     }
 
     @Test
     void getCidade() {
-        Estacao estacao = new Estacao("Estacao A", "Cidade A");
         assertEquals("Cidade A", estacao.getCidade());
     }
 }

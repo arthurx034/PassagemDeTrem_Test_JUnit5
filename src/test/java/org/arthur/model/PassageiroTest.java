@@ -8,14 +8,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class PassageiroTest {
 
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
     @Test
     void temDesconto() {
         Passageiro p1 = new Passageiro("Arthur", 10, "123456");

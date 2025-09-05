@@ -10,16 +10,11 @@ class TremTest {
 
     Trem trem1;
     Trem trem2;
-    Trem trem3;
 
     @BeforeEach
     void setUp() {
         trem1 = new Trem("T123", 3, 2);
         trem2 = new Trem("T123", 2, 1);
-    }
-
-    @AfterEach
-    void tearDown() {
     }
 
     @Test

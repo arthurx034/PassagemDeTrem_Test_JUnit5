@@ -33,10 +33,6 @@ class BilheteTest {
         bilhete1 = new Bilhete(p1, viagem, 100.0);
     }
 
-    @AfterEach
-    void tearDown() {
-    }
-
     @Test
     void calcularPreco() {
         Bilhete bilhete2 = new Bilhete(p2, viagem, 100.0
