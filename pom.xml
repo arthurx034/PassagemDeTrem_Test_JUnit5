@@ -22,17 +22,33 @@
             <version>5.11.0</version>
             <scope>test</scope>
         </dependency>
+
+            <!-- Mockito Core -->
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <version>5.14.2</version>
+                <scope>test</scope>
+            </dependency>
+
+            <!-- Integração do Mockito com JUnit Jupiter (JUnit 5) -->
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-junit-jupiter</artifactId>
+                <version>5.14.2</version>
+                <scope>test</scope>
+            </dependency>
+
     </dependencies>
 
     <build>
         <plugins>
-            <!-- Configurar Surefire para rodar testes JUnit 5 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.5</version>
                 <configuration>
-                    <useModulePath>false</useModulePath>
+                    <argLine>-javaagent:${settings.localRepository}/org/mockito/mockito-core/5.14.2/mockito-core-5.14.2.jar</argLine>
                 </configuration>
             </plugin>
         </plugins>

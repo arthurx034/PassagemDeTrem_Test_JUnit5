@@ -8,13 +8,13 @@ class PassagemTremIntegrationTest {
     @Test
     void testeFluxoCompletoIntegracao() {
         // 1. Criar duas estações diferentes (origem e destino)
-        Estacao origem = new Estacao("São Paulo", "SP");
-        Estacao destino = new Estacao("Rio de Janeiro", "RJ");
+        Estacao origem = new Estacao("Terminal Central", "SP");
+        Estacao destino = new Estacao("Terminal Fim do mundo", "RJ");
 
-        // 2. Criar um trem com capacidade limitada
+        // 2. Criar um treem com capacidade limitada
         Trem trem = new Trem("T123", 2, 0); // Capacidade para 2 passageiros
 
-        // 3. Criar uma viagem entre as estações utilizando o trem
+        // 3. Criar uma viagem entre as estações utilizando o treem
         Viagem viagem = new Viagem(origem, destino, null, null, trem);
 
         // 4. Criar um passageiro
@@ -26,7 +26,7 @@ class PassagemTremIntegrationTest {
         // 6. Validar o embarque do passageiro
         assertTrue(bilhete.validarEmbarque(viagem), "Bilhete deve ser válido para a viagem");
 
-        // 7. Garantir que a ocupação do trem aumentou
+        // 7. Garantir que a ocupação do treem aumentou
         assertEquals(0, trem.getOcupacaoAtual(), "Trem deve começar vazio");
         trem.embarcarPassageiro();
         assertEquals(1, trem.getOcupacaoAtual(), "Ocupação deve aumentar após embarque");

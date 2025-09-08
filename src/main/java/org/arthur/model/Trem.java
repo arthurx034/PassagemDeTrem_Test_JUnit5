@@ -36,6 +36,10 @@ public class Trem {
         return ocupacao;
     }
 
+    public void setOcupacaoAtual(int ocupacao) {
+        this.ocupacao = ocupacao;
+    }
+
     public boolean temVagas() {
         if (capacidade == getOcupacaoAtual()) {
             return false;
